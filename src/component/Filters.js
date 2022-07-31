@@ -11,8 +11,9 @@ const Filters = () => {
   // make state for rating
 
   return (
-    <div className="filters">
-      <span className="title">Filter Products</span>
+    <>
+    <div className="title">Filter Products</div>
+    <div className="Filters">
       <span>
         <Form.Check
           inline
@@ -88,6 +89,7 @@ const Filters = () => {
           style={{ cursor: "pointer" }}
         />
       </span>
+      <span>
       <Button
         variant="light"
         onClick={() =>
@@ -98,7 +100,11 @@ const Filters = () => {
       >
         Clear Filters
       </Button>
+      </span>
+      
     </div>
+    </>
+      
   );
 };
 

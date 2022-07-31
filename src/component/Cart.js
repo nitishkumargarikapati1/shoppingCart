@@ -72,7 +72,7 @@ const Cart = () => {
           ))}
         </ListGroup>
       </div>
-      <div className="filters summary">
+      <div className="Filters summary">
         <span className="title">Subtotal ({cart.length}) items</span>
         <span style={{ fontWeight: 700, fontSize: 20 }}>Total: ₹ {total}</span>
         <Button type="button" disabled={cart.length === 0}>

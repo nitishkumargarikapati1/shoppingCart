@@ -52,18 +52,18 @@
 
   }
   
-  .filters {
+  .Filters {
     background-color:rgb(32, 95, 32);
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 100%;
     margin: 10px;
     height:auto;
   }
   
-  .filters > span {
+  .Filters > span {
     padding-bottom: 20px;
   }
   
@@ -89,6 +89,7 @@
   
   .summary {
     width: 30%;
+    margin:auto;
   }
   
   
@@ -100,7 +101,7 @@
       margin: 5px;
     }
   
-    .filters > span {
+    .Filters > span {
       font-size: 10px;
     }
   
