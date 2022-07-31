@@ -21,35 +21,16 @@ const Header = () => {
   } = CartState();
 
   return (
-    <Navbar bg="success"  style={{ minHeight: 80 }} className="header">
-      <Container>
-        <Navbar.Brand>
-          <Link to="/" className="shoppingCart">Shopping Cart</Link>
-        </Navbar.Brand>
-        {useLocation().pathname.split("/")[1] !== "cart" && (
-          <Navbar.Text className="search">
-            <FormControl
-              type="search"
-              placeholder="Search a product..."
-              className="m-auto search"
-              aria-label="Search"
-              onChange={(e) => {
-                productDispatch({
-                  type: "FILTER_BY_SEARCH",
-                  payload: e.target.value,
-                });
-              }}
-            />
-          </Navbar.Text>
-        )}
-        <Nav>
-          <Dropdown alignRight>
+    <Navbar bg="success"  style={{ minHeight: 80 }}>
+      <Container className="header">
+      <Nav>
+          <Dropdown className="dropdown">
             <Dropdown.Toggle variant="success">
               <FaShoppingCart color="white" fontSize="25px" />
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{ minWidth: 370 }}>
+            <Dropdown.Menu style={{minWidth:300}}>
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
@@ -86,7 +67,28 @@ const Header = () => {
               )}
             </Dropdown.Menu>
           </Dropdown>
+          
         </Nav>
+        {useLocation().pathname.split("/")[1] !== "cart" && (
+          <Navbar.Text className="search">
+            <FormControl
+              type="search"
+              placeholder="Search a Product..."
+              className="m-auto search"
+              aria-label="Search"
+              onChange={(e) => {
+                productDispatch({
+                  type: "FILTER_BY_SEARCH",
+                  payload: e.target.value,
+                });
+              }}
+            />
+          </Navbar.Text>
+        )}
+        
+        <Navbar.Brand>
+          <Link to="/" className="shoppingCart">Shopping Cart</Link>
+        </Navbar.Brand>
       </Container>
     </Navbar>
   );

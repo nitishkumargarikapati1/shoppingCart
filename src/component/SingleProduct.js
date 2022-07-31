@@ -11,7 +11,7 @@ const SingleProduct = ({ prod }) => {
   return (
     <div >
       <Card className="products">
-        <Card.Img variant="top" src={prod.image} alt={prod.name} />
+        <Card.Img variant="top" src={prod.image} alt={prod.name}  />
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }} >
